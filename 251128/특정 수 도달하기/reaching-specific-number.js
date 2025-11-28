@@ -7,7 +7,7 @@ function getValue() {
     for (let i = 0; i < input.length; i++) {
         if (input[i] >= 250) return `${sum} ${aver}`;
         sum += input[i];
-        aver = sum / (i+1);
+        aver = Math.round(sum / (i+1) *10) / 10;
     }
     return `${sum} ${aver}`;
 }
