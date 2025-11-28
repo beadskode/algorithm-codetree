@@ -1,5 +1,6 @@
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().trim().split(' ').map(Number);
+
 function getValue() {
     let sum = 0;
     let aver = 0;
@@ -8,6 +9,7 @@ function getValue() {
         sum += input[i];
         aver = sum / (i+1);
     }
+    return `${sum} ${aver}`;
 }
 
 console.log(getValue())
